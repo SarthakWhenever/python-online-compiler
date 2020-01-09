@@ -36,6 +36,9 @@ io.on("connection", (client)=>{
 			})
 			runner.on("exit", (code)=> {
 				client.emit("exited","");
+				try {
+					fs.unlinkSync(file_path);
+				}catch(er) {log(er)}
 			});
 			runner.on("error",(c)=> {
 				client.emit("output",c);
