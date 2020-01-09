@@ -2,4 +2,4 @@
 Interactive Online Python Compiler
 
 See the code on server:
-https://python-interactive.herokuapp.com/
+https://interactive-python.herokuapp.com/
