@@ -1,0 +1,3 @@
+a = input("Number")
+a = int(a)
+print(a*2)

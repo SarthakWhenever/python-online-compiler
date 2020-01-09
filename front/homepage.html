@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Online Compiler</title>
+	<script src="./socket.io.js"></script>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+	<div class="app">
+		<h1>Simple Online Compiler Sample</h1>
+		<div class="coding-area">
+			<textarea class="code" id="mainCode">print("Hello World")</textarea>
+		</div>
+		<br/>
+		<button id="compile-btn">Run</button>
+		<br/>
+		<div class="output" id="output-area"></div>
+		<br/>
+		<div class="input-form">
+			<input type="text" id="code-input" disabled/><button id="send-input" disabled>Input</button>
+		</div>
+	</div>
+	<script src="homepage.js"></script>
+</body>
+</html>
