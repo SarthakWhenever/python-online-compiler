@@ -65,6 +65,9 @@ io.on("connection", (client)=>{
 	});
 	client.on("error", (err)=> {
 		console.log("Error");
+	});
+	client.on("disconnected", (cl)=> {
+		console.log("CLient DIsconnected")
 	})
 }); 
 
