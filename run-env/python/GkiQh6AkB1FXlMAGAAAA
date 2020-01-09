@@ -1,3 +1,0 @@
-a = input('a')
-a = int(a)
-print(a*2)

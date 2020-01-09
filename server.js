@@ -35,8 +35,10 @@ io.on("connection", (client)=>{
 				client.emit("output", _buffer.toString());
 			})
 			runner.on("exit", (code)=> {
-				log(code)
 				client.emit("exited","");
+				try {
+					fs.unlinkSync(file_path);
+				}catch(er) {log(er)}
 			});
 			runner.on("error",(c)=> {
 				client.emit("output",c);

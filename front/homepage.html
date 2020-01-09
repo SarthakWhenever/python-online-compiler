@@ -4,12 +4,15 @@
 	<title>Online Compiler</title>
 	<script src="./socket.io.js"></script>
 	<link rel="stylesheet" type="text/css" href="./style.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.7/ace.js" ></script>
 </head>
 <body>
 	<div class="app">
 		<h1>Simple Online Compiler Sample</h1>
-		<div class="coding-area">
-			<textarea class="code" id="mainCode">print("Hello World")</textarea>
+		<div class="edit-area">
+			<div class="coding-area" id="mainCode" >a = input("Name: ")
+print("Hi " + a)</div>
 		</div>
 		<br/>
 		<button id="compile-btn">Run</button>
@@ -20,6 +23,11 @@
 			<input type="text" id="code-input" disabled/><button id="send-input" disabled>Input</button>
 		</div>
 	</div>
+	<script>
+		var editor = ace.edit("mainCode");
+	    editor.setTheme("ace/theme/monokai");
+	    editor.session.setMode("ace/mode/javascript");
+	</script>
 	<script src="homepage.js"></script>
 </body>
 </html>

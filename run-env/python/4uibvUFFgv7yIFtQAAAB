@@ -1,3 +1,0 @@
-a = input("Number: ")
-a = input(a)
-print(a+1)

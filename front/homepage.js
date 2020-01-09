@@ -1,7 +1,6 @@
 let {log} = console;
 let el = (x) => document.querySelectorAll(x);
 let compileBtn = el("#compile-btn")[0],
-codeForm = el("#mainCode")[0],
 inputBtn = el("#send-input")[0],
 codeInput = el("#code-input")[0],
 outputArea = el("#output-area")[0];
@@ -32,7 +31,7 @@ socket.on("disconnect",()=> {
 compileBtn.onclick = function() {
 	disableRun(); compiling=true;
 	outputArea.innerHTML = "";
-	let mainCode = codeForm.value;
+	let mainCode = getCode();
 	socket.emit("compile/python", {
 		code: mainCode
 	});
@@ -44,6 +43,14 @@ inputBtn.onclick = function() {
 	socket.emit("input",codeInput.value);
 }
 
+codeInput.onkeypress = function(ev) {
+	if(ev.keyCode!=13)return;
+	ev.preventDefault();
+	inputBtn.onclick();
+}
+function getCode() {
+	return editor.getValue()
+}
 function disableInputs(bool=true) {
 	[inputBtn,codeInput].forEach((x)=>x.disabled=bool);
 }

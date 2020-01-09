@@ -12,13 +12,23 @@ body {
 	min-width: 100%;
 	min-height: 100%;
 }
-textarea {
-	width: 99%;
-	height: 200px;
+ .edit-area {
+    width:95%;
+    height: 300px;
+    display:inline-block;
+    position:relative;
 }
+#mainCode {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
 .output {
 	white-space: pre;
-	min-width: 100%;
+	min-width: 90%;
 	min-height: 200px;
 	max-height: 200px;
 	overflow: auto;
