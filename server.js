@@ -25,7 +25,7 @@ io.on("connection", (client)=>{
 	client.on("compile/python", (data)=> {
 		try {
 			compiling = true;
-			let file_path = 'run-env/python/'+client_id;
+			let file_path = __dirname + '/run-env/python/'+client_id;
 			let file = fs.writeFileSync(file_path, data.code);
 			runner = spawn("python3", [file_path]);
 			runner.stdout.on('data', (_buffer) => {
