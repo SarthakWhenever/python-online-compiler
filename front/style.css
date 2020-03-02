@@ -27,6 +27,7 @@ body {
 }
 
 .output {
+  font-family:"Courier New",monospace;
 	white-space: pre;
 	min-width: 90%;
 	min-height: 200px;
