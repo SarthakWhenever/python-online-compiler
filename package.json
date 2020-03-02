@@ -4,13 +4,15 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "engines": {
-    "node": "12.x"
+    "node": "12.x",
+    "python": "3.x"
   },
   "dependencies": {
     "express": "^4.17.1",
